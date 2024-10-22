@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>AI? Goldfish?</title>
+  </head>
+  <body>
+
+    <div id="nav">
+      <!-- <div id="track">
+        <p id="nav-text">
+          CAN AI TAKE CARE OF MY GOLDFISH <span id="name"></span> ? &nbsp;
+        </p>
+      </div> -->
+
+<div class="marquee">
+  <div class="marquee--inner">
+    <span id="t">
+      <div>CAN AI TAKE CARE OF MY GOLDFISH <span class="name"></span>? &ensp;&ensp; CAN AI TAKE CARE OF MY GOLDFISH <span class="name"></span>?</div>
+    </span>
+    <span id="t">
+      <div>CAN AI TAKE CARE OF MY GOLDFISH <span class="name"></span>? &ensp;&ensp; CAN AI TAKE CARE OF MY GOLDFISH <span class="name"></span>?</div>
+    </span>
+  </div>
+</div>
+
+
+    </div>
+
+    <div id="middle-section">
+        <div id="stats">
+          <div id="title1"><p id="name-stats"></p></div>
+        </div>
+        <div id="fish">
+          <img src="assets/fish.png"/>
+        </div>
+        <div id="ai-func">
+          <div id="title1" style="border-bottom: 3px solid #2a2727;">
+            <p>AI GENERATED CARE FUNCTIONS</p>
+          </div>
+        </div>
+    </div>
+
+    <div id="user-input">
+      <div id="situation">
+        <div id="title2">
+          <p style="color: #a5bef5; margin-left: 0px;">WRITE OUT A SITUATION FOR <span class="name"></span></p>
+        </div>
+        <div id="input">
+          <span class="name" style="font-size: 30px;"></span>
+
+          <div class="dropdown">
+            <button class="dropbtn">Action</button>
+            <!-- The dropdown-content div should contain the a tags -->
+            <div class="dropdown-content dropdown-content-verbs"></div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn">Noun</button>
+            <!-- The dropdown-content div should contain the a tags -->
+            <div class="dropdown-content dropdown-content-nouns"></div>
+          </div>
+
+        </div>
+      </div>
+      <div id="ai-output">
+        <div id="title2" style="border-bottom: 3px solid white;">
+          <p style="color: white; margin-left: 0px;">MAJOR CONCERNS: </p>
+        </div>
+        <div id="output">
+          <p>CHOSEN STATS:</p>
+          <div class="chosen-stats"></div>
+        </div>
+      </div>
+    </div>
+
+  <!-- <p id="results1"></p>
+    <p id="results2"></p>
+    <p id="results3"></p>  -->
+    <script type="module" src="script.mjs"></script>
+  </body>
+</html>
