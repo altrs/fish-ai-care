@@ -308,3 +308,25 @@ window.duplicate = function() {
     createdStats = [];
     statsOutput.innerHTML = '';
 };
+
+
+
+// TOOL TIP TOOL TIP TOOL TIP TOOL TIP
+
+const tooltipContainer = document.querySelector('.tooltip-container');
+const tooltip = document.querySelector('.tooltip');
+
+// Show and position tooltip on mouse move
+tooltipContainer.addEventListener('mousemove', (event) => {
+    tooltip.style.opacity = 1; // Make the tooltip visible
+
+    // Set the position of the tooltip to follow the mouse cursor
+    tooltip.style.left = `${event.pageX + 10}px`; // Offset slightly to avoid covering the cursor
+    tooltip.style.top = `${event.pageY + -70}px`;
+});
+
+// Hide tooltip when mouse leaves the container
+tooltipContainer.addEventListener('mouseleave', () => {
+    tooltip.style.opacity = 0; // Hide the tooltip
+});
+

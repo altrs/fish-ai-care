@@ -95,7 +95,8 @@
         <div id="title2" style="border-bottom: 3px solid white;">
           <p style="color: white; margin-left: 0px;">NOTES: <span id="concerns"></span></p>
         </div>
-        <div id="output">
+        <div id="output" class="tooltip-container">
+          <div class="tooltip">When stats appear: Based on the way the AI has decided to handle the situation, choose how you think it will affect the fish</div>
           <div class="outputButtonDiv">
             <p>CHOSEN STATS:</p>
             <button id="duplicateButton" onclick="duplicate()">Submit Stats</button>
@@ -105,9 +106,7 @@
       </div>
     </div>
 
-  <!-- <p id="results1"></p>
-    <p id="results2"></p>
-    <p id="results3"></p>  -->
+
     <script type="module" src="src/script.mjs"></script>
   </body>
 </html>
