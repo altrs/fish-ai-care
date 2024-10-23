@@ -1,0 +1,329 @@
+@import url("https://use.typekit.net/lpz2nct.css");
+
+
+body{
+	background-image: url('assets/background.png');
+	margin: 0px;
+	padding: 25px;
+	font-size: 20px;
+	font-family: "lores-12", sans-serif;
+	overflow: hidden;
+}
+
+img{
+	width: 250px;
+}
+
+button{
+	cursor: pointer;
+}
+
+@keyframes swimming {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-20px)}
+  100% {transform: translateY(0px);}
+}
+
+@keyframes marquee {
+  0% {left: 0;}
+  100% {left: -100%;}
+}
+
+#nav{
+	border: 3px solid #a5bef5;
+	background-color: white;
+	width: 95vw;
+	height: 60px;
+	margin-bottom: 30px;
+	border-radius: 30px;
+	overflow: hidden;
+  	white-space: nowrap;
+}
+
+.marquee {
+	overflow: hidden;
+	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 95vw;
+	height: 60px;
+	overflow: hidden;
+	white-space: nowrap;
+	margin-bottom: 30px;
+	font-size: 35px;
+	color: #a5bef5;
+}
+
+.marquee--inner {
+  display: block;
+  width: 200%;
+  position: absolute;
+  animation: marquee 20s linear infinite;
+}
+
+#t{
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+
+#middle-section{
+	width: 95vw;
+	height: 45vh;
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 30px;
+	justify-content: space-between;
+}
+
+#stats{
+	width: 30%;
+	border: 3px solid #a5bef5;
+	overflow: scroll;
+}
+
+#fish{
+	justify-content: center;
+	margin: auto;
+}
+
+#fish img{
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-name: swimming;
+ 	animation-duration: 4s;
+}
+
+#ai-func{
+	width: 30%;
+	border: 3px solid #161515;
+}
+
+.functions{
+	margin: 25px 15px 10px 5px;
+	height: 35vh;
+    overflow-y: scroll;
+}
+
+.functions p{
+	margin: 0px;
+	padding: 0px;
+	height: 20px;
+}
+
+.functions p:hover{
+	font-style: italic;
+}
+
+.functions::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+  background-color: white;
+}
+.functions::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  background-color: black;
+}
+
+#user-input{
+	height: 30vh;
+	width: 95vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#situation{
+	height: 100%;
+	width: 45%;
+	border: 3px solid #a5bef5;
+	background-color: white;
+	border-radius: 30px;
+	display: flex;
+	flex-direction: column; /* Set the direction to column */
+	align-items: center;    /* Center children horizontally */
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.submit{
+	background-color: white;
+	border: 3px solid #a5bef5;
+	border-radius: 20px;
+	font-family: "lores-12", sans-serif;
+	color: #a5bef5;
+	width: 80%;
+	height: 40px;
+	margin-bottom: 20px;
+	font-size: 17px;
+}
+
+.submit:hover{
+	background-color: #a5bef5;
+	color: white;
+}
+
+#input{
+	width: 80%; /* Full width inside the container */
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between; /* Maintain spacing between elements */
+	align-items: center;
+	margin-bottom: 20px; /* Add some space below for submit button */
+	color: #a5bef5;
+}
+
+#ai-output{
+	height: 100%;
+	width: 45%;
+	border: 3px solid #161515;
+	background: #161515;
+	border-radius: 30px;
+}
+
+#output{
+	color: white;
+	margin: -15px 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+#title1{
+	width: 100%;
+	height: 35px;
+	border-bottom: 3px solid #a5bef5;
+}
+
+#title1 p{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#title2{
+	width: 90%;
+	height: 35px;
+	border-bottom: 3px solid #a5bef5;
+	margin: 20px 30px;
+	overflow: hidden;
+}
+
+#title2 p{
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+/*DROP DOWN*/
+.dropbtn {
+  padding: 16px;
+  color: #a5bef5;
+  font-size: 16px;
+  width: 200px;
+  border: 3px solid #a5bef5;
+  font-family: "lores-12", sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-radius: 20px;
+  background-color: white;
+  font-size: 20px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  z-index: 1;
+  overflow: scroll;
+  background-color: white;
+  border: 3px solid #a5bef5;
+  border-radius: 20px;
+}
+
+.dropdown-content a {
+  color: #a5bef5;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #a5bef5; color: white;}
+
+.dropdown:hover .dropdown-content {display: block; transform: translateY(-65px);}
+
+.highlight {
+    background-color: #556faa;
+    color: white;
+}
+.disable-hover {
+    pointer-events: none; /* Temporarily disable hover */
+}
+
+/*STATS*/
+
+.stats-list{
+	margin: 15px 20px 15px 20px;
+	justify-content: space-between;
+	align-items: center;
+	overflow: scroll;
+}
+
+.stat{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.stats-list p{
+	margin: 7px;
+}
+
+.outer-statbar{
+	width: 60%;
+	height: 20px;
+	border: 2px solid #a5bef5;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+.inner-statbar{
+	width: 50%;
+	height: 20px;
+	background-color: #a5bef5;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.chosen-stats{
+	width: 73%;
+	height: 110px;
+	margin-top: 20px;
+	border: 1px solid white;
+	overflow: scroll;
+}
+
+#duplicateButton{
+	width: 70px;
+	height: 70px;
+	margin: -10px 0px 0px 20px;
+	background-color: #161515;;
+	border: 2px solid white;
+	color: white;
+	font-family: "lores-12", sans-serif;
+	border-radius: 5px;
+}
+
+#duplicateButton:hover{
+	color: #161515;
+	background-color: white;
+}
+
+
+
+

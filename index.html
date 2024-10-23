@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style.css">
     <title>AI? Goldfish?</title>
   </head>
   <body>
@@ -33,13 +33,38 @@
     <div id="middle-section">
         <div id="stats">
           <div id="title1"><p id="name-stats"></p></div>
+          <div class="stats-list">
+
+            <div id="health" class="stat">
+              <p class="stat-title">Hunger</p>
+              <div class="outer-statbar">
+                <div class="inner-statbar" id="hunger-amount"></div>
+              </div>
+            </div>
+
+            <div id="health" class="stat">
+              <p class="stat-title">Health</p>
+              <div class="outer-statbar">
+                <div class="inner-statbar" id="health-amount"></div>
+              </div>
+            </div>
+
+            <div id="health" class="stat">
+              <p class="stat-title">Happiness</p>
+              <div class="outer-statbar">
+                <div class="inner-statbar" id="happiness-amount"></div>
+              </div>
+            </div>
+
+          </div>
         </div>
         <div id="fish">
-          <img src="assets/fish.png"/>
+          <img src="src/assets/fish.png"/>
         </div>
         <div id="ai-func">
           <div id="title1" style="border-bottom: 3px solid #2a2727;">
-            <p>AI GENERATED CARE FUNCTIONS</p>
+            <p id="funcTitle">AI GENERATED CARE FUNCTIONS</p>
+            <div class="functions"></div>
           </div>
         </div>
     </div>
@@ -53,25 +78,28 @@
           <span class="name" style="font-size: 30px;"></span>
 
           <div class="dropdown">
-            <button class="dropbtn">Action</button>
+            <button class="dropbtn" id="verb">ACTION</button>
             <!-- The dropdown-content div should contain the a tags -->
             <div class="dropdown-content dropdown-content-verbs"></div>
           </div>
 
           <div class="dropdown">
-            <button class="dropbtn">Noun</button>
+            <button class="dropbtn" id="noun">NOUN</button>
             <!-- The dropdown-content div should contain the a tags -->
             <div class="dropdown-content dropdown-content-nouns"></div>
           </div>
-
         </div>
+        <button class="submit" onclick="submitSituation()">WHAT WILL AI DO?</button>
       </div>
       <div id="ai-output">
         <div id="title2" style="border-bottom: 3px solid white;">
-          <p style="color: white; margin-left: 0px;">MAJOR CONCERNS: </p>
+          <p style="color: white; margin-left: 0px;">NOTES: <span id="concerns"></span></p>
         </div>
         <div id="output">
-          <p>CHOSEN STATS:</p>
+          <div class="outputButtonDiv">
+            <p>CHOSEN STATS:</p>
+            <button id="duplicateButton" onclick="duplicate()">Submit Stats</button>
+          </div>
           <div class="chosen-stats"></div>
         </div>
       </div>
@@ -80,6 +108,6 @@
   <!-- <p id="results1"></p>
     <p id="results2"></p>
     <p id="results3"></p>  -->
-    <script type="module" src="script.mjs"></script>
+    <script type="module" src="src/script.mjs"></script>
   </body>
 </html>
