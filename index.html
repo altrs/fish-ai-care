@@ -1,3 +1,5 @@
+<!-- CHATGPT AI WAS USED IN THE MAKING OF THIS PROJECT -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,12 +12,7 @@
   <body>
 
     <div id="nav">
-      <!-- <div id="track">
-        <p id="nav-text">
-          CAN AI TAKE CARE OF MY GOLDFISH <span id="name"></span> ? &nbsp;
-        </p>
-      </div> -->
-
+ 
 <div class="marquee">
   <div class="marquee--inner">
     <span id="t">
@@ -59,7 +56,7 @@
           </div>
         </div>
         <div id="fish">
-          <img src="src/assets/fish.png"/>
+          <img id="spinningFish" src="src/assets/fish.png"/>
         </div>
         <div id="ai-func">
           <div id="title1" style="border-bottom: 3px solid #2a2727;">
@@ -91,12 +88,13 @@
         </div>
         <button class="submit" onclick="submitSituation()">WHAT WILL AI DO?</button>
       </div>
-      <div id="ai-output">
+      <div id="ai-output" class="tooltip-container2">
+        <div class="tooltip2">This box displays AI output when you submit a situation for your fish in the left-side box. I</div>
         <div id="title2" style="border-bottom: 3px solid white;">
-          <p style="color: white; margin-left: 0px;">NOTES: <span id="concerns"></span></p>
+          <p style="color: white; margin-left: 0px;">AI'S NOTES: <span id="concerns"></span></p>
         </div>
         <div id="output" class="tooltip-container">
-          <div class="tooltip">When stats appear: Based on the way the AI has decided to handle the situation, choose how you think it will affect the fish</div>
+          <div class="tooltip">When stats appear: Based on the way the AI has decided to handle the situation (Highlighted blue in the box above), choose how you think it will affect the fish by setting values for stats bars. Press submit stats after deciding values for each bar.</div>
           <div class="outputButtonDiv">
             <p>CHOSEN STATS:</p>
             <button id="duplicateButton" onclick="duplicate()">Submit Stats</button>

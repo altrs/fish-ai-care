@@ -29,6 +29,7 @@ button{
   100% {left: -100%;}
 }
 
+
 #nav{
 	border: 3px solid #a5bef5;
 	background-color: white;
@@ -87,6 +88,7 @@ button{
 #fish{
 	justify-content: center;
 	margin: auto;
+	cursor: url('src/assets/heart.png');
 }
 
 #fish img{
@@ -358,3 +360,32 @@ button{
     border-color: #555 transparent transparent transparent;
 }
 
+.tooltip-container2 {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip2 {
+    position: fixed;
+    background-color: #555;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    font-size: 15px;
+    max-width: 200px; /* Add a max-width to control the tooltip width */
+    white-space: normal; /* Allow the text to wrap */
+    word-wrap: break-word; /* Ensures long words will break */
+}
+
+.tooltip2::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}

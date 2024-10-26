@@ -247,6 +247,7 @@ window.submitSituation = function() {
             // Create the inner stat bar (inner bar to represent progress)
             let statinnerbar = document.createElement('div');
             statinnerbar.classList.add('inner-statbar'); // Add a class for inner bar styling
+            statinnerbar.style.backgroundColor = "white";
             statinnerbar.style.width = '50%'; // Example width, set according to logic
 
             // Append the stat name and the bars to the new stat div
@@ -254,19 +255,25 @@ window.submitSituation = function() {
             statbar.appendChild(statinnerbar); // Inner bar inside outer bar
             newStat.appendChild(statbar); // Append the full bar (with inner bar)
 
-            // Event listener to set the inner bar width based on click
-            statbar.addEventListener('click', function(event) {
-                // Get the click position relative to the statbar
+            // Function to handle real-time width update
+            function updateWidth(event) {
                 const rect = statbar.getBoundingClientRect();
-                const clickX = event.clientX - rect.left; // Click position within the bar
-                const barWidth = rect.width; // Total width of the bar
-
-                // Calculate the new width as a percentage of the total width
-                const newWidthPercentage = (clickX / barWidth) * 100;
-
-                // Set the width of the inner bar based on the click position
+                const mouseX = event.clientX - rect.left;
+                const barWidth = rect.width;
+                const newWidthPercentage = (mouseX / barWidth) * 100;
                 statinnerbar.style.width = `${newWidthPercentage}%`;
+            }
+
+            // Add the real-time update on mousemove
+            statbar.addEventListener('mousemove', updateWidth);
+
+            // Stop the real-time update on click
+            statbar.addEventListener('click', function() {
+                // Remove the mousemove event listener to stop the real-time update
+                statinnerbar.style.backgroundColor =  "#a5bef5"
+                statbar.removeEventListener('mousemove', updateWidth);
             });
+
 
             // Append the stat to the statsOutput container
             createdStats.push(newStat);
@@ -316,6 +323,9 @@ window.duplicate = function() {
 const tooltipContainer = document.querySelector('.tooltip-container');
 const tooltip = document.querySelector('.tooltip');
 
+const tooltipContainer2 = document.querySelector('.tooltip-container2');
+const tooltip2 = document.querySelector('.tooltip2');
+
 // Show and position tooltip on mouse move
 tooltipContainer.addEventListener('mousemove', (event) => {
     tooltip.style.opacity = 1; // Make the tooltip visible
@@ -328,5 +338,18 @@ tooltipContainer.addEventListener('mousemove', (event) => {
 // Hide tooltip when mouse leaves the container
 tooltipContainer.addEventListener('mouseleave', () => {
     tooltip.style.opacity = 0; // Hide the tooltip
+});
+
+tooltipContainer2.addEventListener('mousemove', (event) => {
+    tooltip2.style.opacity = 1; // Make the tooltip visible
+
+    // Set the position of the tooltip to follow the mouse cursor
+    tooltip2.style.left = `${event.pageX + 10}px`; // Offset slightly to avoid covering the cursor
+    tooltip2.style.top = `${event.pageY + -70}px`;
+});
+
+// Hide tooltip when mouse leaves the container
+tooltipContainer2.addEventListener('mouseleave', () => {
+    tooltip2.style.opacity = 0; // Hide the tooltip
 });
 
